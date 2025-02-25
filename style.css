@@ -1,0 +1,103 @@
+/* GERAL */
+
+.conteiner{
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/*PARTE DE CIMA */
+/* CABEÇALHO */
+
+.cabecalho{
+    display: flex;
+    background-color: #002043;
+    border-bottom: 2px solid white;
+    height: 100px;
+}
+
+.cbleft{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.cbright{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+
+.icsenac{
+    margin-left: 100px;
+    width: 70px;
+}
+
+.icperfil{
+    margin-right: 50px;
+    filter: brightness(80%);
+}
+
+
+/* PARTE "PRINCIPAL" */
+
+.topPage{
+    display: flex;
+    position: relative;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.senacFoto{
+    z-index: 2;
+    margin-left: 150px;
+    margin-top: 30px;
+    width: 544px;
+}
+
+.letreiro{
+    z-index: 3;
+    height: 350px;
+    width: 300px;
+}
+
+.letras{
+    font-size: 30px;
+    color: white;
+}
+
+.partecima{
+    z-index: 1;
+    position: absolute;
+    background-color: #002043;
+    height: 30vw;
+    width: 100vw;
+}
+
+.partebaixo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+    background-color: transparent;
+    position: absolute;
+}
+
+.bolha1{
+    z-index: 0;
+    height: 40vw;
+    
+}
