@@ -18,7 +18,7 @@ body {
 .cabecalho{
     display: flex;
     background-color: #002043;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     height: 100px;
 }
 
@@ -69,14 +69,53 @@ body {
 }
 
 .letreiro{
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     z-index: 3;
     height: 350px;
-    width: 300px;
+    width: 100%;
 }
 
 .letras{
-    font-size: 30px;
+    margin: 0;
+    margin-left: 100px;
+    font-size: 90px;
+    font-family: "roboto";
     color: white;
+    border-right: 10px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 18.2ch;
+    animation: marca 2.2s step-end forwards , write 1s steps(18, end);
+}
+
+.letras2{
+    margin: 0;
+    margin-left: 100px;
+    font-size: 100px;
+    font-family: "roboto";
+    color: white;
+    border-right: 10px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 18.2ch;
+    opacity: 0;
+    animation: aparecer 0s 3.2s forwards, marca 2.2s step-end forwards, write 1s steps(18, end);
+    animation-delay: 1s;
+    
+}
+
+.frase{
+    font-size: 32px;
+    text-align: center;
+    align-self: center;
+    color: white;
+    font-family: "Robotol";
+    opacity: 0;
+    animation: aparecer 3s ease-in-out 1s forwards ;
 }
 
 .partecima{
@@ -100,4 +139,38 @@ body {
     z-index: 0;
     height: 40vw;
     
+}
+
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url(font/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Robotol";
+    src: url(font/roboto/Roboto-ThinItalic.ttf);
+}
+
+@keyframes marca{
+    50%{
+        border-right-color:transparent;
+    }
+    100%{
+        border-right-color: transparent;
+    }
+}
+
+
+@keyframes write{
+    0%{
+        width:0;
+    }
+}
+
+@keyframes aparecer{
+    to{
+        opacity: 1;
+    }
 }
